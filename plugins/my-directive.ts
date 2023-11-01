@@ -1,0 +1,15 @@
+/**
+ * @see https://nuxt.com/docs/guide/directory-structure/plugins#vue-directives
+ */
+
+export default defineNuxtPlugin((nuxtApp) => {
+  nuxtApp.vueApp.directive("focus", {
+    mounted(el) {
+      el.focus();
+    },
+    getSSRProps(binding, vnode) {
+      // you can provide SSR-specific props here
+      return {};
+    },
+  });
+});
