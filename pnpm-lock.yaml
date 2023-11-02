@@ -13,6 +13,9 @@ devDependencies:
   '@element-plus/nuxt':
     specifier: ^1.0.6
     version: 1.0.6(@element-plus/icons-vue@2.1.0)(element-plus@2.4.1)
+  '@iconify-json/tabler':
+    specifier: ^1.1.96
+    version: 1.1.96
   '@nuxt/content':
     specifier: ^2.9.0
     version: 2.9.0(nuxt@3.8.0)(vue@3.3.7)
@@ -857,6 +860,12 @@ packages:
 
   /@floating-ui/utils@0.1.6:
     resolution: {integrity: sha512-OfX7E2oUDYxtBvsuS4e/jSn4Q9Qb6DzgeYtsAdkPZ47znpoNsMgZw0+tVijiv3uGNR6dgNlty6r9rzIzHjtd/A==}
+    dev: true
+
+  /@iconify-json/tabler@1.1.96:
+    resolution: {integrity: sha512-BozRq6622JUEOBlZhF/l6UxqwHoWFiaLP6UCH9/mOvuek/tZureuQ2DSEaz5SdpKJamtBQjtJCH6zzsim6YKUQ==}
+    dependencies:
+      '@iconify/types': 2.0.0
     dev: true
 
   /@iconify/types@2.0.0:
