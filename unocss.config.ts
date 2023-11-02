@@ -13,7 +13,7 @@ export default defineConfig({
   shortcuts: [
     [
       "input",
-      "form-input mx-2 px-2 py-2 w-20 h-2 default shadow hover:shadow-hover focus:shdaow-focus focus:shadow-outline",
+      "mx-2 px-2 py-2 w-20 h-2 default shadow hover:shadow-hover focus:shdaow-focus transition ease-in-out",
     ],
 
     [

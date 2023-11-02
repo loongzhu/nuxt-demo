@@ -1,3 +1,9 @@
+import fs from "fs";
+
+if (!fs.existsSync(".env")) {
+  fs.writeFileSync(".env", "MY_ENV_VARIABLE=hello");
+}
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
