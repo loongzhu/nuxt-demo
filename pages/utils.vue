@@ -8,6 +8,7 @@ const url = useRequestURL();
   <div>
     <h3>Utils Directory</h3>
     <ClientOnly>
+      <p>utils/formatDate(): {{ formatDate() }}</p>
       <p>utils/randomEntry(): {{ randomEntry(arr) }}</p>
       <p>utils/formatNumber(): {{ formatNumber(1234) }}</p>
     </ClientOnly>

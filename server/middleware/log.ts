@@ -1,3 +1,4 @@
 export default defineEventHandler((event) => {
-  console.log("New request: " + getRequestURL(event));
+  const date = useDate("HH:mm:ss");
+  console.log(`[${date}] [request]: ${getRequestURL(event)}`);
 });
