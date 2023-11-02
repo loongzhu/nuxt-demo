@@ -7,6 +7,10 @@ import HelloProvide from "./../components/HelloProvide.vue";
   <div>
     <h3>Plugin Directory</h3>
     <HelloProvide />
+
+    <div>
+      Use plugin/my-directive v-focus: <input input v-focus type="text" />
+    </div>
   </div>
 </template>
 
