@@ -61,4 +61,6 @@ export default defineNuxtConfig({
     importStyle: "scss",
     themes: ["dark"], // dark theme
   },
+
+  extends: ["./some-app"],
 });

@@ -75,6 +75,10 @@ const routes = [
     path: "/hello-routers",
   },
   {
+    name: "Some app",
+    path: "/App",
+  },
+  {
     name: "Not Found",
     path: "/Not Found",
   },
