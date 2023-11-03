@@ -18,6 +18,7 @@ This project can also be used as a nuxt project template.
 - [@pinia-plugin-persistedstate/nuxt](https://prazdevs.github.io/pinia-plugin-persistedstate/)
 - [element-plus](https://element-plus.org/en-US/)
 - [@element-plus/nuxt](https://github.com/element-plus/element-plus-nuxt)
+- [@iconify-json/tabler](https://tabler-icons.io/)
 - [typescript](https://www.typescriptlang.org/)
 - [sass](https://sass-lang.com/)
 - [vue-gtag-next](https://github.com/MatteoGabriele/vue-gtag-next)
