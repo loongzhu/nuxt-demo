@@ -119,9 +119,7 @@ const default_width = 81;
           v-for="(it, index) in Array.from({ length: dayCount * 24 })"
           :data-id="item.id"
         ></div>
-        <ClientOnly>
-          <AppBar v-for="bar in item.bars" :date="date" :info="bar"></AppBar>
-        </ClientOnly>
+        <AppBar v-for="bar in item.bars" :date="date" :info="bar"></AppBar>
       </div>
     </div>
 

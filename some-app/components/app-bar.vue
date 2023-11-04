@@ -61,12 +61,14 @@ function onDrop(event: DragEvent) {
     @dragover.stop
     @dragend.stop="onDrop"
   >
-    <ElTooltip placement="top">
-      <template #content>
-        {{ info.name }}
-      </template>
-      <div class="name" @drop.prevent.stop>bar-{{ info.name }}</div>
-    </ElTooltip>
+    <ClientOnly>
+      <ElTooltip placement="top">
+        <template #content>
+          {{ info.name }}
+        </template>
+        <div class="name" @drop.prevent.stop>bar-{{ info.name }}</div>
+      </ElTooltip>
+    </ClientOnly>
   </div>
 </template>
 
