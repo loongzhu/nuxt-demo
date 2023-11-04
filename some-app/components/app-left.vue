@@ -1,6 +1,8 @@
 <script setup lang="ts" name="app-left">
-export interface Props {
-  data: any[];
+import type { item } from "./types";
+
+interface Props {
+  data: item[];
   scrollTop: number;
   labels?: string[];
 }
@@ -8,7 +10,6 @@ export interface Props {
 const props = withDefaults(defineProps<Props>(), {
   data: () => [],
   scrollTop: 0,
-  labels: () => Array.from({ length: 10 }, (_, i) => `label${i}`),
 });
 
 const { data, scrollTop } = toRefs(props);
@@ -39,8 +40,8 @@ const maxWidth = ref<number>(400);
 
 const isMouseDown = ref<boolean>(false);
 
-const max: number = 516;
-const min: number = 112;
+const max = 516;
+const min = 112;
 
 function mousemove(e: MouseEvent) {
   if (isMouseDown.value) {
@@ -135,7 +136,7 @@ $movewidth: 10px;
   border: 1px solid $border-color;
   border-bottom: none;
   margin-right: 10px;
-  background-color: blanchedalmond;
+  background-color: $bg-bar;
 }
 
 .app_left-header-icons {

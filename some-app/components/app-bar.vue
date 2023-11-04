@@ -1,17 +1,16 @@
 <script setup lang="ts" name="app-bar">
-import { ElTooltip } from "element-plus";
-import {} from "vue";
-
 import dayjs from "dayjs";
+import { ElTooltip } from "element-plus";
+import type { bar } from "./types";
 
 interface Props {
   date: string;
-  info: any;
+  info: bar;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   date: () => dayjs().startOf("day").format("YYYY-MM-DD HH:mm:ss"),
-  info: () => ({}),
+  info: () => ({} as bar),
 });
 
 const { date, info } = toRefs(props);

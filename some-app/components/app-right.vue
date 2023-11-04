@@ -1,9 +1,10 @@
 <script setup lang="ts" name="right">
 import dayjs from "dayjs";
+import type { item } from "./types";
 
 interface Props {
   date?: string;
-  data: any[];
+  data: item[];
   scrollTop: number;
   labels?: string[];
 }
@@ -17,17 +18,18 @@ const props = withDefaults(defineProps<Props>(), {
   date: () => dayjs().startOf("day").format("YYYY-MM-DD HH:mm:ss"),
   data: () => [],
   scrollTop: 0,
-  labels: () => Array.from({ length: 10 }, (_, i) => `label${i}`),
 });
 
-const { date, data, labels, scrollTop } = toRefs(props);
+const { date, data, scrollTop } = toRefs(props);
 
 const emits = defineEmits(["adjustBar", "onScroll"]);
+
+const days = 3;
 
 const { statrTime, endTime }: State = (() => {
   return {
     statrTime: dayjs(date.value).format("YYYY-MM-DD"),
-    endTime: dayjs(date.value).add(3, "day").format("YYYY-MM-DD"),
+    endTime: dayjs(date.value).add(days, "day").format("YYYY-MM-DD"),
   };
 })();
 
@@ -80,15 +82,20 @@ function onDrop(event: DragEvent) {
 
   emits("adjustBar", { barId, tabulationId });
 }
+
+const default_width = 81;
 </script>
 
 <template>
-  <div class="app_right" :style="{ '--width': dayCount * 24 * 81 + 10 + 'px' }">
+  <div
+    class="app_right"
+    :style="{ '--width': dayCount * 24 * default_width + 10 + 'px' }"
+  >
     <div class="app_right-timeline">
       <div class="app_right-timeline-day">
         <div
           v-for="(item, index) in Array.from({ length: dayCount })"
-          :style="{ '--dayWidth': 24 * 81 - 1 + 'px' }"
+          :style="{ '--dayWidth': 24 * default_width - 1 + 'px' }"
         >
           {{ dayjs(statrTime).add(index, "day").format("YYYY-MM-DD") }}
         </div>
@@ -121,7 +128,8 @@ function onDrop(event: DragEvent) {
     <div
       class="app_right-time-line"
       :style="{
-        '--left': left * 82 + 'px',
+        '--width': default_width + 'px',
+        '--left': left * default_width + 'px',
         '--height': data.length * 30 + 62 + 'px',
       }"
     >
@@ -215,9 +223,8 @@ function onDrop(event: DragEvent) {
     }
   }
 }
-
 .app_right-time-line {
-  width: 70px;
+  width: var(--width);
   text-align: center;
   position: absolute;
   top: 0;
