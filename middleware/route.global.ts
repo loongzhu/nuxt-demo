@@ -6,8 +6,13 @@
  * @see https://nuxt.com/docs/guide/directory-structure/middleware#middleware-order
  */
 
+import { consola } from "consola";
+import { colors } from "consola/utils";
+
 export default defineNuxtRouteMiddleware((to, from) => {
   const date = formatDate("HH:mm:ss");
-  const log = `[${date}] [route]: from "${from.path}" to "${to.path}"`;
-  console.log(log);
+  consola.info(
+    colors.green(`[${date}] route`),
+    `from "${from.path}" to "${to.path}"`
+  );
 });

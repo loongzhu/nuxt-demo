@@ -1,7 +1,7 @@
 import fs from "fs";
 
 if (!fs.existsSync(".env")) {
-  fs.writeFileSync(".env", "MY_ENV_VARIABLE=hello");
+  fs.writeFileSync(".env", "MY_ENV_VARIABLE=hello\nNODE_ENV=development\n");
 }
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
