@@ -20,13 +20,13 @@
     "@nuxt/devtools": "latest",
     "@pinia-plugin-persistedstate/nuxt": "^1.2.0",
     "@pinia/nuxt": "^0.5.1",
-    "@unocss/nuxt": "^0.57.1",
-    "@vueuse/nuxt": "^10.5.0",
-    "element-plus": "^2.4.1",
-    "nuxt": "^3.8.0",
+    "@unocss/nuxt": "^0.57.3",
+    "@vueuse/nuxt": "^10.6.1",
+    "element-plus": "^2.4.2",
+    "nuxt": "^3.8.1",
     "sass": "^1.69.5",
     "typescript": "^5.2.2",
-    "vue": "^3.3.7",
+    "vue": "^3.3.8",
     "vue-gtag-next": "^1.14.0"
   }
 }
